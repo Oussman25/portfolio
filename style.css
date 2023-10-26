@@ -6,12 +6,31 @@ header{
 
 body{
     margin: 0;
-
 }
 
 section{
     width: 100%;
     height: 912px;
+}
+
+.selecteur{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    gap: 5px;
+    right: 12.5vh;
+    top: 80%;
+}
+
+.selecteur a{
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: solid 1px;
+}
+
+a:hover{
+    background-color: #0E43C8;
 }
 
 .pagepresentation{
@@ -43,13 +62,24 @@ section{
 }
 .carre1{
     position: absolute;
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     border: solid #0E43C8 2px;
     transform: rotate(45deg);
-    right: 30vh;
+    right: 20vh;
     top: 30vh;
 }
+
+.carre2{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border: solid #FCFFFB 2px;
+    transform: rotate(30deg);
+    left: 30vh;
+    top: 30vh;
+}
+
 .divbutton{
     margin-top: 50px;
 }
@@ -61,6 +91,26 @@ section{
     width: 325px;
     height: 50px;
     color: #0E43C8;
+}
+
+.button2{
+    position: relative;
+    top: 30px;
+    background-color: #D9D9D9;
+    text-align: center;
+    border: none;
+    width: 325px;
+    height: 50px;
+}
+
+.lesprojet button{
+    position: relative;
+    top: 75px;
+    background-color: #D9D9D9;
+    text-align: center;
+    border: none;
+    width: 300px;
+    height: 50px;
 }
 
 h1{
@@ -84,9 +134,9 @@ p{
 }
 
 .navbar{
-    margin-top: 60px;
-    margin-left: 120px;
-    margin-right: 90px;
+    margin-top: 5vh;
+    margin-left: 15vh;
+    margin-right: 10vh;
     display: flex;
     width: 100%;
 }
@@ -166,7 +216,7 @@ h2{
     align-items: center;
     flex-direction: column;
 }
-.contact div{
+.contact a{
     display: flex;
     text-align: center;
     gap: 2px;
