@@ -1,42 +1,79 @@
 header{
-    position: sticky;
-    top: 5px;
+    display: flex;
+    position: fixed;
+    width: 100%;
 }
+
 section{
     width: 100%;
     height: 912px;
 }
+
 .pagepresentation{
-    display: flex;
-    justify-content: center;
+    /* display: flex;
+    justify-content: center; */
     align-items: center;
     background: linear-gradient(90deg, #0E43C8 67%, #FCFFFB 33%);
 }
+
 .presentation {
-    color: #080505;
+    position: absolute;
+    top: 45%;
+    left: 15%;
+    text-align: center;
+}
+
+.moi{
+    position: absolute;
+    top: 45%;
+    left: 23%;
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+}
+
+.divbutton{
+    margin-top: 50px;
+}
+
+.button{
+    background-color: #FCFFFB;
+    text-align: center;
+    border: none;
+    width: 325px;
+    height: 50px;
+    color: #0E43C8;
+}
+
+h1{
+    font-family: Michroma;
+    font-size: 36px;
+    color: #FCFFFB;
     text-align: center;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
 }
-h1{
-    font-family: Michroma;
-    font-size: 36px;
-}
+
 p{
-    font-size: 16px;
+    color: #FCFFFB;
+    text-align: center;
     font-family: Metrophobic;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
+
 .navbar{
+    margin-top: 60px;
+    margin-left: 120px;
+    margin-right: 90px;
     display: flex;
+    width: 100%;
 }
 .menu{
     margin-left: auto;
-}
-.moi img{
-    width: 300px;
-    height: 300px;
-    border-radius: 100%;
 }
 .pagecompetences{
     background-color: #FCFFFB;
