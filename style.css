@@ -138,9 +138,9 @@ p{
 }
 
 .navbar{
-    /* margin-top: 5vh;
+    margin-top: 5vh;
     margin-left: 15vh;
-    margin-right: 10vh; */
+    margin-right: 10vh;
     display: flex;
     width: 100%;
 }
@@ -190,7 +190,7 @@ h2{
     gap: 32px;
     justify-content: center;
     flex-wrap: wrap;
-    width: 1042px;
+    width: 100%;
 }
 .lesprojet div{
     display: flex;
@@ -356,8 +356,7 @@ h2{
         width: 30vh;
         height: 30vh;
     }
-
-
-
-
+    .lesprojet button{
+        width: 200px;
+    }
 }
