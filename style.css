@@ -231,16 +231,34 @@ h2{
 
 @media screen and (max-width:1024px) {
     section{
+        width: 100%;
         height: 1366px;
     }
     .pagepresentation{
         background: linear-gradient(180deg, #0E43C8 67%, #FCFFFB 33%);
     }
     .divpres{
-        display: flex;
+        /* display: flex;  */
         width: 100%;
         height: 100%;
-        flex-direction: column;
+        /* flex-direction: column;
+        align-items: center;
+        justify-content: center; */
     }
+    .presentation{
+        position: relative;
+        margin: auto;
+        top: 40%;
+        left: auto;
+
+    }
+    .moi{
+        position: relative;
+        margin: auto;
+        top: 0px;
+        right: auto;
+        
+    }
+
     
 }
