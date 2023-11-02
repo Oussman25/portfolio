@@ -136,22 +136,22 @@ p{
 }
 .projet{
     display: flex;
-    gap: 5vw;
+    gap: 3vw;
     align-items: center;
 }
 .lesprojet{
     display: flex;
-    gap: 5vw;
+    gap: 3vw;
     justify-content: center;
     flex-wrap: wrap;
-    width: 75vw;
+    width: 83vw;
 }
 .lesprojet div{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 35vw;
+    width: 40vw;
     height: 35vh;
     background-color: #FCFFFB;
 }
@@ -161,7 +161,7 @@ p{
     align-items: center;
     font-size: xx-large;
     width: 100px;
-    height: 662px;
+    height: 73vh;
     background-color: #FCFFFB;
 }
 .pagecontact{
@@ -332,9 +332,6 @@ p{
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
-    .lesprojet div {
-        width: 50vh;
     }
     .lesprojet div:nth-child(n+3){
         display: none;
