@@ -54,10 +54,16 @@ a:hover{
     position: absolute;
     top: 35%;
     right: 23%;
-    width: 300px;
-    height: 300px;
-    border-radius: 100%;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
 }
+.moirouge{
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+}
+
 .animationbg{
     position: absolute;
     width: 100%;
@@ -363,14 +369,22 @@ h2{
 
     }
     .moi{
+        width: 300px;
+        height: 300px;
         margin-top: 15vh;
         position: unset;        
+    }
+    .moirouge{
+        width: 300px;
+        height: 300px;
     }
     .competences{
         padding-top: 100px;
         gap: 3vh;
     }
     .competences div{
+        display: flex;
+        flex-wrap: wrap; 
         width: 15vh;
         height: 15vh;
     }
