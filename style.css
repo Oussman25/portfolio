@@ -10,6 +10,39 @@ body{
 section{
     width: 100vw;
     height: 100vh;
+    z-index: 0;
+}
+section:nth-child(n) :not(#animation){
+    z-index: 2;
+}
+.navbar{
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+.animationbg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+.carre1{
+    position: absolute;
+    width: 20vh;
+    height: 20vh;
+    border: solid #0E43C8 2px;
+    transform: rotate(45deg);
+}   
+.carre2{
+    position: absolute;
+    width: 10vh;
+    height: 10vh;
+    border: solid #FCFFFB 2px;
+    transform: rotate(30deg);
+}
+.divpresGlobal{
+    width: 100%;
+    height: 100%;
 }
 .presentation{
     text-align: center;
@@ -103,15 +136,15 @@ p{
 }
 .projet{
     display: flex;
-    gap: 32px;
+    gap: 5vw;
     align-items: center;
 }
 .lesprojet{
     display: flex;
-    gap: 32px;
+    gap: 5vw;
     justify-content: center;
     flex-wrap: wrap;
-    width: 100%;
+    width: 75vw;
 }
 .lesprojet div{
     display: flex;
@@ -190,27 +223,18 @@ p{
     .pagepresentation{
         background: linear-gradient(90deg, #0E43C8 67%, #FCFFFB 33%);
     }
-    .presentation {
-        position: absolute;
-        top: 35%;
-        left: 12%;
-    } 
-    .divpres{
+    .divpresGlobal{
+        display: flex;
         width: 100%;
         height: 100%;
-        position: absolute;
-    }
-    .divpres2{
-        width: 100%;
-        height: 100%;
-        position: absolute;
+        justify-content: space-evenly;
+        align-items: center;
     }
     .moi{
-        position: absolute;
         top: 35%;
-        right: 23%;
-        width: 350px;
-        height: 350px;
+        right: 23%; 
+        width: 450px;
+        height: 450px;
         border-radius: 50%;
     }
     .moirouge{
@@ -222,22 +246,13 @@ p{
         position: absolute;
         width: 100%;
         height: 100%;
+        z-index: 1;
     }
     .carre1{
-        position: absolute;
-        width: 200px;
-        height: 200px;
-        border: solid #0E43C8 2px;
-        transform: rotate(45deg);
         right: 20vw;
-        top: 50vh;
+        top: 70vh;
     }   
     .carre2{
-        position: absolute;
-        width: 100px;
-        height: 100px;
-        border: solid #FCFFFB 2px;
-        transform: rotate(30deg);
         left: 10vw;
         top: 20vh;
     }
@@ -263,6 +278,11 @@ p{
     p{
         font-size: 16px;
     }
+    .navbar{
+        margin-top: 2.5vh;
+        margin-left: 10vw;
+        margin-right: 10vw;
+    }
     .pagepresentation{
         background: linear-gradient(180deg, #0E43C8 60%, #FCFFFB 40%);
     }
@@ -274,7 +294,7 @@ p{
         width: 60px;
         height: 36px;
     }
-    .divpres{
+    .divpres1{
         display: flex; 
         width: 100%;
         height: 60%;
@@ -288,7 +308,6 @@ p{
         justify-content: center;
         width: 100%;
         height: 40%;
-
     }
     .moi{
         width: 300px;
@@ -298,24 +317,16 @@ p{
         width: 300px;
         height: 300px;
     }
-    .animationbg{
-        display: none;
-    }
     .selecteur{
         display: none;
     }
-
     .carre1{
-        left: 25vh;
-        right: auto;
-        bottom: 10vh;
-        top: auto;
-    }
+        right: 20vw;
+        top: 70vh;
+    }   
     .carre2{
-        right: 10vh;
-        left: auto;
-        top: 10vh;
-        bottom: auto;
+        left: 10vw;
+        top: 20vh;
     }
     .lesprojet{
         display: flex;
@@ -353,8 +364,6 @@ p{
         margin-top: 2.5vh;
         margin-left: 10vw;
         margin-right: 10vw;
-        display: flex;
-        align-items: center ;
     }
     .logo svg{
         width: 119px;
@@ -363,6 +372,14 @@ p{
     .menu svg{
         width: 39px;
         height: 23px;
+    }
+    .carre1{
+        right: 15vw;
+        top: 60vh;
+    }   
+    .carre2{
+        left: 10vw;
+        top: 20vh;
     }
     .pagepresentation{
         background: linear-gradient(180deg, #0E43C8 55%, #FCFFFB 45%);
@@ -373,28 +390,28 @@ p{
     }
     .lesprojet div:nth-child(n+2){
         display: none;
-    }  
-    .animationbg{
-        display: none;
-    }
+    } 
     .selecteur{
         display: none;
     }
-    .divpres{
+    .divpres1{
         display: flex; 
         width: 100%;
-        height: 100%;
+        height: 60%;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
     }
-    .presentation{
-        margin-top: 20vh;
-
+    .divpres2{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 40%;
     }
     .moi{
         width: 300px;
-        height: 300px;
-        margin-top: 15vh;       
+        height: 300px;      
     }
     .moirouge{
         width: 300px;
