@@ -68,7 +68,9 @@ section:nth-child(n) :not(#animation){
     width: 325px;
     height: 50px;
 }
-
+.lazergame{
+    background-image: ;
+}
 .lesprojet button{
     position: relative;
     top: 6vh;
@@ -217,7 +219,7 @@ p{
         border-radius: 50%;
         border: solid 1px;
     }
-    a:hover{
+    .selecteur a:hover{
         background-color: #0E43C8;
     }
     .pagepresentation{
