@@ -5,11 +5,12 @@ header{
 }
 body{
     margin: 0;
-    width: 100vw;
 }
 section{
-    width: 100vw;
+    width: 98.4vw;
     height: 100vh;
+    margin: 0;
+    padding: 0;
     z-index: 0;
 }
 section:nth-child(n) :not(#animation){
@@ -17,7 +18,7 @@ section:nth-child(n) :not(#animation){
 }
 .navbar{
     display: flex;
-    width: 100%;
+    width: 90%;
     align-items: center;
 }
 .animationbg{
@@ -49,6 +50,9 @@ section:nth-child(n) :not(#animation){
 }
 .divbutton{
     margin-top: 50px;
+}
+a:link, a:visited, a:hover, a:active{
+    text-decoration: none;
 }
 .cv {
     background-color: #FCFFFB;
@@ -193,8 +197,6 @@ p{
         margin-top: 5vh;
         margin-left: 15vh;
         margin-right: 10vh;
-        display: flex;
-        width: 100%;
     }
     h2{
         font-size: 15px;
@@ -217,7 +219,7 @@ p{
         width: 18px;
         height: 18px;
         border-radius: 50%;
-        border: solid 1px;
+        border: #0E43C8 solid 1px;
     }
     .selecteur a:hover{
         background-color: #0E43C8;
@@ -235,8 +237,8 @@ p{
     .moi{
         top: 35%;
         right: 23%; 
-        width: 450px;
-        height: 450px;
+        width: 425px;
+        height: 425px;
         border-radius: 50%;
     }
     .moirouge{
