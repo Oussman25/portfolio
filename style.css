@@ -68,9 +68,9 @@ section:nth-child(n) :not(#animation){
     width: 325px;
     height: 50px;
 }
-.lazergame{
+/* .lazergame{
     background-image: ; 
-}
+} */
 .lesprojet button{
     position: relative;
     top: 6vh;
