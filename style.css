@@ -72,12 +72,12 @@ a:link, a:visited, a:hover, a:active{
     width: 325px;
     height: 50px;
 }
-/* .lazergame{
-    background-image: ; 
-} */
+.lazergame img{
+    width: 20vw;
+    height: auto;
+}
 .lesprojet button{
     position: relative;
-    top: 6vh;
     background-color: #D9D9D9;
     text-align: center;
     border: none;
@@ -144,6 +144,7 @@ p{
     display: flex;
     gap: 3vw;
     align-items: center;
+    justify-content: center;
 }
 .lesprojet{
     display: flex;
@@ -160,6 +161,18 @@ p{
     width: 40vw;
     height: 35vh;
     background-color: #FCFFFB;
+}
+.lesprojet a{
+    color: black;
+}
+.lesprojet a:hover{
+        animation: animprojet 1s ;
+        animation-fill-mode: forwards;
+}
+@keyframes animprojet{
+    to{
+        transform: scale(1.03);
+    }
 }
 .suivant{
     display: none;
