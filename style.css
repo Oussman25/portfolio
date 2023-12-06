@@ -169,6 +169,14 @@ p{
         animation: animprojet 1s ;
         animation-fill-mode: forwards;
 }
+.lesprojet h2{
+    color: white;
+    text-align: center;
+}
+.jeuTPT img{
+    width: 50%;
+    height: auto;
+}
 @keyframes animprojet{
     to{
         transform: scale(1.03);
