@@ -3,11 +3,14 @@ header{
     position: fixed;
     width: 100%;
 }
+html {
+    scroll-behavior: smooth;
+}
 body{
     margin: 0;
 }
 section{
-    width: 98.4vw;
+    width: 100vw;
     height: 100vh;
     margin: 0;
     padding: 0;
@@ -22,9 +25,10 @@ section:nth-child(n) :not(#animation){
     align-items: center;
 }
 .animationbg{
+    display: none;
     position: absolute;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     z-index: 1;
 }
 #animation {
@@ -35,22 +39,78 @@ section:nth-child(n) :not(#animation){
     animation-timing-function: linear;
 }
 
-@keyframes hor-movement {
+.colorChange1{
+    animation: colorChange1 200ms ease-in-out forwards;
+}
+
+@keyframes colorChange1 {
 from {
-    left: 0%;
+    fill: #FCFFFB;
+    color:#FCFFFB ;
 }
 to {
-    left: 100%;
+    fill: #B80C09;
+    color: #B80C09;
 }
 }
 
-@keyframes ver-movement {
+.colorChange2{
+    animation: colorChange2 200ms ease-in-out forwards;
+}
+
+@keyframes colorChange2 {
 from {
-    top: 0%;
+    fill: #B80C09;
+    color:#B80C09 ;
 }
 to {
-    top: 100%;
+    fill: #FCFFFB;
+    color:#FCFFFB ;
 }
+}
+
+.colorChange3{
+    animation: colorChange1 200ms ease-in-out forwards;
+}
+
+.burger-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.bar {
+    width: 50px;
+    height: 5px;
+    background-color: #0E43C8;
+    margin: 3px 0;
+    transition: 0.4s;
+}
+
+.burger-menu.active .bar:nth-child(1) {
+    transform: rotate(45deg) translateY(15px);
+}
+
+.burger-menu.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-menu.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translateY(-15px);
+}
+
+.content {
+    padding: 20px;
+}
+
+/* Media query pour rendre le menu visible sur les petits écrans */
+@media screen and (max-width: 600px) {
+    .bar {
+        width: 25px;
+    }
 }
 
 .carre1{
@@ -257,12 +317,12 @@ p{
     .selecteur{
         display: flex;
         flex-direction: column;
-        position: absolute;
         gap: 5px;
-        right: 12.5vh;
+        right: 7.5vh;
         top: 80%;
+        position: fixed;
     }    
-    .selecteur a{
+    .selecteur a{   
         width: 18px;
         height: 18px;
         border-radius: 50%;
