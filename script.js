@@ -14,7 +14,7 @@ window.addEventListener("scroll", () => {
   const pageheight2 = pageheight1 + section.offsetHeight
   const pageheight3 = pageheight2 + section.offsetHeight
 
-  // if (scrollPosition > 0 ) {
+  // if (scrollPosition > 0 && scrollPosition < (pageheight1 + 1) ) {
   //   smoothScrolling(pagecompetences);
   // }
   if (scrollPosition < pageheight1) {
