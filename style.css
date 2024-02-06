@@ -259,6 +259,11 @@ p{
     color: white;
     text-align: center;
 }
+.projet_naruto img{
+    width: auto;
+    height: 50%;
+}
+
 .jeuTPT img{
     width: 50%;
     height: auto;
