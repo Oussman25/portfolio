@@ -250,6 +250,9 @@ p{
 }
 .lesprojet a{
     color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .lesprojet a:hover{
         animation: animprojet 1s ;
@@ -551,8 +554,8 @@ p{
         margin: 0;
     }
     .lesprojet div{
-        width: 30vh;
-        height: 30vh;
+        width: 30vw;
+        height: 20vh;
     }
     .lesprojet button{
         width: 200px;
