@@ -271,6 +271,12 @@ p{
     width: 50%;
     height: auto;
 }
+
+.Yforma img{
+    width: 50%;
+    height: auto;
+}
+
 @keyframes animprojet{
     to{
         transform: scale(1.03);
