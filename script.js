@@ -1,57 +1,96 @@
-const colorChange1 = document.querySelector('.colorChange1')
-const logo =  document.querySelector(".logo h1")
-const section = document.querySelector("section")
+const logo = document.querySelector(".logo h1");
+const burgerMenuBars = document.querySelectorAll(".bar");
+const section = document.querySelector("section");
+const pagePresentation = document.querySelector("#pagepresentation");
+const pageCompetences = document.querySelector("#pagecompetences");
+const pageProjet = document.querySelector("#pageprojet");
+const pageContact = document.querySelector("#pagecontact");
+const selecteurs = document.querySelectorAll(".selecteur a");
+const selecteursHover = document.querySelectorAll(".selecteur a:hover");
 
-const pagepresentation = document.querySelector("#pagepresentation")
-const pagecompetences = document.querySelector("#pagecompetences")
-const pageprojet = document.querySelector("#pageprojet")
-const pagecontact = document.querySelector("#pagecontact")
-
-window.addEventListener("scroll", () => {
-  // Obtenez la position de défilement verticale
-  const scrollPosition = window.scrollY || document.documentElement.scrollTop;
-  const pageheight1 = section.offsetHeight - 50
-  const pageheight2 = pageheight1 + section.offsetHeight
-  const pageheight3 = pageheight2 + section.offsetHeight
-
-  // if (scrollPosition > 0 && scrollPosition < (pageheight1 + 1) ) {
-  //   smoothScrolling(pagecompetences);
-  // }
-  if (scrollPosition < pageheight1) {
+function mettreAJourClasses(scrollPosition, hauteur1, hauteur2, hauteur3) {
+  if (scrollPosition < hauteur1) {
     logo.classList.remove("colorChange1");
-    logo.textContent = "[OUSSMAN]"
-  }
-  if (scrollPosition > pageheight1) {
+    logo.textContent = "[OUSSMAN]";
+    burgerMenuBars.forEach(bar => bar.classList.remove("bgColorChange1"));
+    selecteurs.forEach(selecteur => selecteur.classList.remove("bdColorChange1"));
+    selecteursHover.forEach(selecteur => selecteur.classList.remove("bgColorChange1"));
+  } else {
     logo.classList.add("colorChange1");
-    logo.textContent = "[O]"
-  } 
-  if (scrollPosition < pageheight2) {
-    logo.classList.remove("colorChange2");
+    logo.textContent = "[O]";
+    burgerMenuBars.forEach(bar => bar.classList.add("bgColorChange1"));
+    selecteurs.forEach(selecteur => selecteur.classList.add("bdColorChange1"));
+    selecteursHover.forEach(selecteur => selecteur.classList.add("bgColorChange1"));
   }
-  if (scrollPosition > pageheight2 ) {
-    logo.classList.add("colorChange2");
-  }
-  if (scrollPosition < pageheight3) {
-    logo.classList.remove("colorChange3");
-  }
-  if (scrollPosition > pageheight3 ) {
-    logo.classList.add("colorChange3");
-  }
-});
 
-function smoothScrolling(targetElement) {
+  if (scrollPosition < hauteur2) {
+    logo.classList.remove("colorChange2");
+    burgerMenuBars.forEach(bar => bar.classList.remove("bgColorChange2"));
+    selecteurs.forEach(selecteur => selecteur.classList.remove("bdColorChange2"));
+    selecteursHover.forEach(selecteur => selecteur.classList.remove("bgColorChange2"));
+  } else {
+    logo.classList.add("colorChange2");
+    burgerMenuBars.forEach(bar => bar.classList.add("bgColorChange2"));
+    selecteurs.forEach(selecteur => selecteur.classList.add("bdColorChange2"));
+    selecteursHover.forEach(selecteur => selecteur.classList.add("bgColorChange2"));
+  }
+
+  if (scrollPosition < hauteur3) {
+    logo.classList.remove("colorChange3");
+    burgerMenuBars.forEach(bar => bar.classList.remove("bgColorChange3"));
+    selecteurs.forEach(selecteur => selecteur.classList.remove("bdColorChange3"));
+    selecteursHover.forEach(selecteur => selecteur.classList.remove("bgColorChange3"));
+  } else {
+    logo.classList.add("colorChange3");
+    burgerMenuBars.forEach(bar => bar.classList.add("bgColorChange3"));
+    selecteurs.forEach(selecteur => selecteur.classList.add("bdColorChange3"));
+    selecteursHover.forEach(selecteur => selecteur.classList.add("bgColorChange3"));
+  }
+}
+
+function limiter(func, limit) {
+  let lastFunc;
+  let lastRan;
+  return function() {
+    const context = this;
+    const args = arguments;
+    if (!lastRan) {
+      func.apply(context, args);
+      lastRan = Date.now();
+    } else {
+      clearTimeout(lastFunc);
+      lastFunc = setTimeout(function() {
+        if ((Date.now() - lastRan) >= limit) {
+          func.apply(context, args);
+          lastRan = Date.now();
+        }
+      }, limit - (Date.now() - lastRan));
+    }
+  };
+}
+
+window.addEventListener("scroll", limiter(() => {
+  const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+  const hauteurPage1 = pagePresentation.offsetHeight - 50;
+  const hauteurPage2 = hauteurPage1 + pageCompetences.offsetHeight;
+  const hauteurPage3 = hauteurPage2 + pageProjet.offsetHeight;
+
+  mettreAJourClasses(scrollPosition, hauteurPage1, hauteurPage2, hauteurPage3);
+}, 100));
+
+function defilementDoux(elementCible) {
   window.scrollTo({
-      top: targetElement.offsetTop,
-      behavior: 'smooth'
+    top: elementCible.offsetTop,
+    behavior: 'smooth'
   });
 }
 
 console.log(section.offsetHeight);
 
 const burgerMenu = document.querySelector('.burger-menu');
-const content = document.querySelector('.content');
+const contenu = document.querySelector('.content');
 
 burgerMenu.addEventListener('click', function () {
-    this.classList.toggle('active');
-    content.classList.toggle('active');
+  this.classList.toggle('active');
+  contenu.classList.toggle('active');
 });

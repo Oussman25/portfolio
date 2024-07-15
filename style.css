@@ -15,7 +15,7 @@ body {
 
 section {
     width: 100vw;
-    height: 100%;
+    height: 100vh;
     margin: 0;
     padding: 0;
     z-index: 0;
@@ -47,10 +47,6 @@ section:nth-child(n) :not(#animation) {
     animation-timing-function: linear;
 }
 
-.colorChange1 {
-    animation: colorChange1 200ms ease-in-out forwards;
-}
-
 @keyframes colorChange1 {
     from {
         fill: #FCFFFB;
@@ -61,10 +57,6 @@ section:nth-child(n) :not(#animation) {
         fill: #B80C09;
         color: #B80C09;
     }
-}
-
-.colorChange2 {
-    animation: colorChange2 200ms ease-in-out forwards;
 }
 
 @keyframes colorChange2 {
@@ -79,9 +71,79 @@ section:nth-child(n) :not(#animation) {
     }
 }
 
+.colorChange1 {
+    animation: colorChange1 200ms ease-in-out forwards;
+}
+
+.colorChange2 {
+    animation: colorChange2 200ms ease-in-out forwards;
+}
+
 .colorChange3 {
     animation: colorChange1 200ms ease-in-out forwards;
 }
+
+@keyframes bgColorChange1 {
+    from {
+        background-color: #FCFFFB;
+    }
+    to {
+        background-color: #B80C09;
+    }
+}
+
+@keyframes bgcolorChange2 {
+    from {
+        background-color: #B80C09;
+    }
+
+    to {
+        background-color: #FCFFFB;
+    }
+}
+
+.bgColorChange1 {
+    animation: bgColorChange1 200ms ease-in-out forwards;
+}
+
+.bgColorChange2 {
+    animation: bgcolorChange2 200ms ease-in-out forwards;
+}
+
+.bgColorChange3 {
+    animation: bgcolorChange1 200ms ease-in-out forwards;
+}
+
+@keyframes bdColorChange1 {
+    from {
+        border: #FCFFFB solid 1px;
+    }
+    to {
+        border: #B80C09 solid 1px;
+    }
+}
+
+@keyframes bdColorChange2 {
+    from {
+        border: #B80C09 solid 1px;
+    }
+    to {
+        border: #FCFFFB solid 1px;
+    }
+}
+
+.bdColorChange1 {
+    animation: bdColorChange1 200ms ease-in-out forwards;
+}
+
+.bdColorChange2 {
+    animation: bdColorChange2 200ms ease-in-out forwards;
+}
+
+.bdColorChange3 {
+    animation: bdColorChange1 200ms ease-in-out forwards;
+}
+
 
 .burger-menu {
     display: flex;
@@ -271,6 +333,7 @@ p {
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    height: 100%;
 }
 
 .competences {
