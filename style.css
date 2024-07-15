@@ -1,36 +1,44 @@
-header{
+/* Styles généraux */
+header {
     display: flex;
     position: fixed;
     width: 100%;
 }
+
 html {
     scroll-behavior: smooth;
 }
-body{
+
+body {
     margin: 0;
 }
-section{
+
+section {
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     margin: 0;
     padding: 0;
     z-index: 0;
 }
-section:nth-child(n) :not(#animation){
+
+section:nth-child(n) :not(#animation) {
     z-index: 2;
 }
-.navbar{
+
+.navbar {
     display: flex;
     width: 90%;
     align-items: center;
 }
-.animationbg{
+
+.animationbg {
     display: none;
     position: absolute;
     width: 100%;
     height: 100%;
     z-index: 1;
 }
+
 #animation {
     animation-name: hor-movement, ver-movement;
     animation-duration: 31.41s, 14.14s;
@@ -39,37 +47,39 @@ section:nth-child(n) :not(#animation){
     animation-timing-function: linear;
 }
 
-.colorChange1{
+.colorChange1 {
     animation: colorChange1 200ms ease-in-out forwards;
 }
 
 @keyframes colorChange1 {
-from {
-    fill: #FCFFFB;
-    color:#FCFFFB ;
-}
-to {
-    fill: #B80C09;
-    color: #B80C09;
-}
+    from {
+        fill: #FCFFFB;
+        color: #FCFFFB;
+    }
+
+    to {
+        fill: #B80C09;
+        color: #B80C09;
+    }
 }
 
-.colorChange2{
+.colorChange2 {
     animation: colorChange2 200ms ease-in-out forwards;
 }
 
 @keyframes colorChange2 {
-from {
-    fill: #B80C09;
-    color:#B80C09 ;
-}
-to {
-    fill: #FCFFFB;
-    color:#FCFFFB ;
-}
+    from {
+        fill: #B80C09;
+        color: #B80C09;
+    }
+
+    to {
+        fill: #FCFFFB;
+        color: #FCFFFB;
+    }
 }
 
-.colorChange3{
+.colorChange3 {
     animation: colorChange1 200ms ease-in-out forwards;
 }
 
@@ -106,40 +116,85 @@ to {
     padding: 20px;
 }
 
-/* Media query pour rendre le menu visible sur les petits écrans */
-@media screen and (max-width: 600px) {
-    .bar {
-        width: 25px;
+/* Projets */
+.projet {
+    padding: 20px;
+    overflow: hidden;
+    /* Ajouté pour éviter les débordements */
+}
+
+.projet .lesprojet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    /* Espacement entre les projets */
+}
+
+.projet .lesprojet a {
+    flex: 1 1 45%;
+    margin: 10px 0;
+    text-align: center;
+    box-sizing: border-box;
+    /* Assurer que le padding et la bordure sont inclus dans la largeur et la hauteur */
+    overflow: hidden;
+    /* Empêcher le débordement des enfants */
+}
+
+/* CSS pour les écrans de tablette */
+@media (max-width: 768px) {
+    .projet .lesprojet {
+        flex-direction: row;
     }
 }
 
-.carre1{
+/* CSS pour les écrans de mobile */
+@media (max-width: 480px) {
+    .projet .lesprojet {
+        flex-direction: row;
+    }
+}
+
+.carre1 {
     position: absolute;
     width: 20vh;
     height: 20vh;
     border: solid #0E43C8 2px;
     transform: rotate(45deg);
-}   
-.carre2{
+}
+
+.carre2 {
     position: absolute;
     width: 10vh;
     height: 10vh;
     border: solid #FCFFFB 2px;
     transform: rotate(30deg);
 }
-.divpresGlobal{
+
+.divpresGlobal {
     width: 100%;
     height: 100%;
 }
-.presentation{
+
+.pagepresentation{
+    height: 100vh;
+}
+
+.presentation {
     text-align: center;
 }
-.divbutton{
+
+.divbutton {
     margin-top: 50px;
 }
-a:link, a:visited, a:hover, a:active{
+
+a:link,
+a:visited,
+a:hover,
+a:active {
     text-decoration: none;
 }
+
 .cv {
     background-color: #FCFFFB;
     text-align: center;
@@ -149,7 +204,7 @@ a:link, a:visited, a:hover, a:active{
     color: #0E43C8;
 }
 
-.cv2{
+.cv2 {
     position: relative;
     top: 30px;
     background-color: #D9D9D9;
@@ -158,11 +213,13 @@ a:link, a:visited, a:hover, a:active{
     width: 325px;
     height: 50px;
 }
-.lazergame img{
+
+.lazergame img {
     width: 20vw;
     height: auto;
 }
-.lesprojet button{
+
+.lesprojet button {
     position: relative;
     background-color: #D9D9D9;
     text-align: center;
@@ -170,12 +227,14 @@ a:link, a:visited, a:hover, a:active{
     width: 20vw;
     height: 50px;
 }
-h2{
+
+h2 {
     font-family: Michroma;
     font-weight: 400;
     letter-spacing: 2.4px;
 }
-h1{
+
+h1 {
     font-family: Michroma;
     color: #FCFFFB;
     text-align: center;
@@ -183,7 +242,8 @@ h1{
     font-weight: 400;
     line-height: normal;
 }
-p{
+
+p {
     font-family: Metrophobic;
     color: #FCFFFB;
     text-align: center;
@@ -191,55 +251,72 @@ p{
     font-weight: 400;
     line-height: normal;
 }
-.moi{
+
+.moi {
     border-radius: 50%;
 }
-.moirouge{
+
+.moirouge {
     border-radius: 50%;
 }
-.menu{
+
+.menu {
     margin-left: auto;
 }
-.pagecompetences{
+
+.pagecompetences {
+    padding: 20px;
     background-color: #FCFFFB;
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
-.competences{
+
+.competences {
     display: flex;
     justify-content: center;
     align-content: center;
+    flex-wrap: wrap;
     height: 100%;
     flex-wrap: wrap;
 }
-.competences div{
+
+.competences div {
     color: #FCFFFB;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #B80C09;
+    box-sizing: border-box;
+    /* Assurer que le padding et la bordure sont inclus dans la largeur et la hauteur */
+    overflow: hidden;
+    /* Empêcher le débordement des enfants */
 }
-.pageprojet{
+
+.pageprojet {
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #0E43C8;
 }
-.projet{
+
+.projet {
     display: flex;
     gap: 3vw;
     align-items: center;
     justify-content: center;
 }
-.lesprojet{
+
+.lesprojet {
     display: flex;
     gap: 3vw;
     justify-content: center;
     flex-wrap: wrap;
     width: 83vw;
 }
-.lesprojet div{
+
+.lesprojet div {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -248,41 +325,46 @@ p{
     height: 35vh;
     background-color: #FCFFFB;
 }
-.lesprojet a{
+
+.lesprojet a {
     color: black;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.lesprojet a:hover{
-        animation: animprojet 1s ;
-        animation-fill-mode: forwards;
+
+.lesprojet a:hover {
+    animation: animprojet 1s;
+    animation-fill-mode: forwards;
 }
-.lesprojet h2{
+
+.lesprojet h2 {
     color: white;
     text-align: center;
 }
-.projet_naruto img{
+
+.projet_naruto img {
     width: auto;
     height: 50%;
 }
 
-.jeuTPT img{
+.jeuTPT img {
     width: 50%;
     height: auto;
 }
 
-.Yforma img{
+.Yforma img {
     width: 50%;
     height: auto;
 }
 
-@keyframes animprojet{
-    to{
+@keyframes animprojet {
+    to {
         transform: scale(1.03);
     }
 }
-.suivant{
+
+.suivant {
     display: none;
     justify-content: center;
     align-items: center;
@@ -291,279 +373,381 @@ p{
     height: 73vh;
     background-color: #FCFFFB;
 }
-.pagecontact{
+
+.pagecontact {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.contact{
+
+.contact {
     display: flex;
     align-items: center;
     flex-direction: column;
 }
-.contact a{
+
+.contact a {
     text-decoration: none;
     color: black;
     display: flex;
     text-align: center;
     gap: 10px;
 }
-.elementcontact{
+
+.elementcontact {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-@media screen and (min-width:1025px){
-    .navbar{
+
+/* Media queries regroupées pour les ajustements responsives */
+
+/* Media query pour les écrans larges (> 1024px) */
+@media screen and (min-width: 1025px) {
+    .navbar {
         margin-top: 5vh;
         margin-left: 15vh;
         margin-right: 10vh;
     }
-    h2{
+    h2 {
         font-size: 15px;
     }
-    h1{
+    h1 {
         font-size: 36px;
     }
-    p{
+    p {
         font-size: 16px;
     }
-    .selecteur{
+    .selecteur {
         display: flex;
         flex-direction: column;
         gap: 5px;
         right: 7.5vh;
         top: 80%;
         position: fixed;
-    }    
-    .selecteur a{   
+    }
+    .selecteur a {
         width: 18px;
         height: 18px;
         border-radius: 50%;
         border: #0E43C8 solid 1px;
     }
-    .selecteur a:hover{
+    .selecteur a:hover {
         background-color: #0E43C8;
     }
-    .pagepresentation{
+    .pagepresentation {
         background: linear-gradient(90deg, #0E43C8 67%, #FCFFFB 33%);
     }
-    .divpresGlobal{
+    .divpresGlobal {
         display: flex;
         width: 100%;
         height: 100%;
         justify-content: space-evenly;
         align-items: center;
     }
-    .moi{
+    .moi {
         top: 35%;
-        right: 23%; 
+        right: 23%;
         width: 425px;
         height: 425px;
         border-radius: 50%;
     }
-    .moirouge{
+    .moirouge {
         width: 350px;
         height: 350px;
         border-radius: 50%;
-    } 
-    .animationbg{
+    }
+    .animationbg {
         position: absolute;
         width: 100vw;
         height: 100vh;
         z-index: 1;
     }
-    .carre1{
+    .carre1 {
         right: 20vw;
         top: 70vh;
-    }   
-    .carre2{
+    }
+    .carre2 {
         left: 10vw;
         top: 20vh;
     }
-    .competences{
+    .competences {
         gap: 40px;
         width: 1264px;
     }
-    .competences div{
+    .competences div {
         width: 246px;
         height: 246px;
     }
-    .suivant{
+    .suivant {
         display: flex;
     }
 }
-@media screen and (min-width:431px) and (max-width:1024px) {
-    h2{
+
+/* Media query pour les écrans de tablette (769px à 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    h2 {
         font-size: 15px;
     }
-    h1{
+    h1 {
         font-size: 36px;
     }
-    p{
+    p {
         font-size: 16px;
     }
-    .navbar{
+    .navbar {
         margin-top: 2.5vh;
         margin-left: 10vw;
         margin-right: 10vw;
     }
-    .pagepresentation{
+    .pagepresentation {
         background: linear-gradient(180deg, #0E43C8 60%, #FCFFFB 40%);
     }
-    .logo svg{
+    .logo svg {
         width: 260px;
         height: 24px;
     }
-    .menu svg{
+    .menu svg {
         width: 60px;
         height: 36px;
     }
-    .divpres1{
-        display: flex; 
+    .divpres1 {
+        display: flex;
         width: 100%;
         height: 60%;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-    .divpres2{
+    .divpres2 {
         display: flex;
         align-items: center;
         justify-content: center;
         width: 100%;
         height: 40%;
     }
-    .moi{
-        width: 300px;
-        height: 300px;      
-    }
-    .moirouge{
+    .moi {
         width: 300px;
         height: 300px;
     }
-    .selecteur{
+    .moirouge {
+        width: 300px;
+        height: 300px;
+    }
+    .selecteur {
         display: none;
     }
-    .carre1{
+    .carre1 {
         right: 20vw;
         top: 70vh;
-    }   
-    .carre2{
+    }
+    .carre2 {
         left: 10vw;
         top: 20vh;
     }
-    .lesprojet{
+    .lesprojet {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-    .lesprojet div:nth-child(n+3){
+    .lesprojet div:nth-child(n+3) {
         display: none;
     }
-    .competences{
+    .competences {
         gap: 5vw;
         flex-direction: column;
         height: 100vw;
     }
-    .competences div{
+    .competences div {
         flex-wrap: wrap;
         align-content: center;
         margin: 0;
         width: 20vw;
         height: 20vw;
-    }  
-    .competences div h2{
+    }
+    .competences div h2 {
         margin: 0;
     }
 }
 
-@media screen and (max-width:430px){
-    h1{
+/* Media query pour les écrans de mobile (max-width 768px) */
+@media screen and (max-width: 768px) {
+    h1 {
         font-size: 20px;
     }
-    h2{
+    h2 {
         font-size: 15px;
     }
-    p{
+    p {
         font-size: 13px;
     }
-    .navbar{
+    .navbar {
         margin-top: 2.5vh;
         margin-left: 10vw;
         margin-right: 10vw;
     }
-    .logo svg{
+    .logo svg {
         width: 119px;
         height: 11px;
     }
-    .menu svg{
+    .menu svg {
         width: 39px;
         height: 23px;
     }
-    .carre1{
+    .carre1 {
         right: 15vw;
         top: 60vh;
-    }   
-    .carre2{
+    }
+    .carre2 {
         left: 10vw;
         top: 20vh;
     }
-    .pagepresentation{
+    .pagepresentation {
         background: linear-gradient(180deg, #0E43C8 55%, #FCFFFB 45%);
     }
-    .lesprojet{
+    .lesprojet {
         flex-direction: column;
         align-items: center;
     }
-    .lesprojet div:nth-child(n+2){
-        display: none;
-    } 
-    .selecteur{
+    .lesprojet div:nth-child(n+2) {
         display: none;
     }
-    .divpres1{
-        display: flex; 
+    .selecteur {
+        display: none;
+    }
+    .divpres1 {
+        display: flex;
         width: 100%;
         height: 60%;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-    .divpres2{
+    .divpres2 {
         display: flex;
         align-items: center;
         justify-content: center;
         width: 100%;
         height: 40%;
     }
-    .moi{
-        width: 300px;
-        height: 300px;      
-    }
-    .moirouge{
+    .moi {
         width: 300px;
         height: 300px;
     }
-    .competences{
+    .moirouge {
+        width: 300px;
+        height: 300px;
+    }
+    .competences {
         padding-top: 100px;
         gap: 3vh;
     }
-    .competences div{
+    .competences div {
         flex-wrap: wrap;
         align-content: center;
         margin: 0;
         width: 15vh;
         height: 15vh;
     }
-    .competences div h2{
+    .competences div h2 {
         margin: 0;
     }
-    .lesprojet div{
+    .lesprojet div {
         width: 30vw;
         height: 20vh;
     }
-    .lesprojet button{
+    .lesprojet button {
+        width: 200px;
+    }
+}
+
+/* Media query pour les écrans très petits (max-width 430px) */
+@media screen and (max-width: 430px) {
+    h1 {
+        font-size: 20px;
+    }
+    h2 {
+        font-size: 15px;
+    }
+    p {
+        font-size: 13px;
+    }
+    .navbar {
+        margin-top: 2.5vh;
+        margin-left: 10vw;
+        margin-right: 10vw;
+    }
+    .logo svg {
+        width: 119px;
+        height: 11px;
+    }
+    .menu svg {
+        width: 39px;
+        height: 23px;
+    }
+    .carre1 {
+        right: 15vw;
+        top: 60vh;
+    }
+    .carre2 {
+        left: 10vw;
+        top: 20vh;
+    }
+    .pagepresentation {
+        background: linear-gradient(180deg, #0E43C8 55%, #FCFFFB 45%);
+    }
+    .lesprojet {
+        flex-direction: column;
+        align-items: center;
+    }
+    .lesprojet div:nth-child(n+2) {
+        display: none;
+    }
+    .selecteur {
+        display: none;
+    }
+    .divpres1 {
+        display: flex;
+        width: 100%;
+        height: 60%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .divpres2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 40%;
+    }
+    .moi {
+        width: 300px;
+        height: 300px;
+    }
+    .moirouge {
+        width: 300px;
+        height: 300px;
+    }
+    .competences {
+        padding-top: 100px;
+        gap: 3vh;
+    }
+    .competences div {
+        flex-wrap: wrap;
+        align-content: center;
+        margin: 0;
+        width: 15vh;
+        height: 15vh;
+    }
+    .competences div h2 {
+        margin: 0;
+    }
+    .lesprojet div {
+        width: 30vw;
+        height: 20vh;
+    }
+    .lesprojet button {
         width: 200px;
     }
 }
