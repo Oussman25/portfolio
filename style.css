@@ -324,6 +324,7 @@ p {
 
 .menu {
     margin-left: auto;
+    display: none;
 }
 
 .pagecompetences {
