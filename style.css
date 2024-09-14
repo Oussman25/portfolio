@@ -327,10 +327,18 @@ p {
     display: none;
 }
 
+.title {
+    font-weight: bolder;
+    letter-spacing: 8px;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
 .pagecompetences {
     padding: 20px 0;
     background-color: #FCFFFB;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     overflow: hidden;
@@ -344,6 +352,7 @@ p {
     flex-wrap: wrap;
     height: 100%;
     flex-wrap: wrap;
+    padding: 20px;
 }
 
 .competences div {
@@ -360,6 +369,7 @@ p {
 
 .pageprojet {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: #0E43C8;
@@ -440,6 +450,7 @@ p {
 
 .pagecontact {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -448,6 +459,7 @@ p {
     display: flex;
     align-items: center;
     flex-direction: column;
+    padding: 20px;
 }
 
 .contact a {
