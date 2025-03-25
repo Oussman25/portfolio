@@ -373,6 +373,7 @@ p {
     align-items: center;
     justify-content: center;
     background-color: #0E43C8;
+    height: 150vh;
 }
 
 .projet {
@@ -418,6 +419,11 @@ p {
 }
 
 .projet_naruto img {
+    width: auto;
+    height: 50%;
+}
+
+.PerfectPage img {
     width: auto;
     height: 50%;
 }
