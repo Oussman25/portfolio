@@ -332,6 +332,7 @@ p {
     letter-spacing: 8px;
     font-size: 24px;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .pagecompetences {
@@ -721,7 +722,6 @@ p {
         height: 300px;
     }
     .competences {
-        padding-top: 100px;
         gap: 3vh;
     }
     .competences div {
